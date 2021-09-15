@@ -1,0 +1,42 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  align-content: center;
+}
+
+
+.app-div {
+  height: 98vh;
+  width: 98%;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: 
+  "navbar jsquiz jsquiz"
+  "navbar jsquiz jsquiz"
+  "navbar jsquiz jsquiz";
+}
+
+.navbar {
+  grid-area: navbar;
+  border: solid whitesmoke 3px;
+  border-radius: 15px;
+  color: whitesmoke;
+}
+
+.navbar, ul {
+  list-style: none;
+}
+
+.jsquiz {
+  padding-left: 10px;
+  grid-area: jsquiz;
+}
