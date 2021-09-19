@@ -1,17 +1,15 @@
 import React from "react";
 
-
-
 const JSArrayQuiz = (props) => {
     console.log("JS quiz", props.jsScoreDisplay)
     return (
         <div className="jsquiz">
-            <h2 className="jsq-title">JavaScript Array Methods Quiz</h2>
+            <h2 className="quiztitle">JavaScript Array Methods Quiz</h2>
             <div className="question-block">
                 <h3>{props.quiz.question}</h3>
             </div>
             <div className="answer-btns">
-                {props.quiz.answers.map((answerOptions) => <button className="btns" onClick={() => props.nextQuestion(answerOptions.isCorrect)}>{answerOptions.answr}</button>)}
+                {props.quiz.answers.map((answerOptions) => <button className="btns" onClick={() => props.nextJSQuestion(answerOptions.isCorrect)}>{answerOptions.answr}</button>)}
             </div>
             <div className="jsarrayscore">
                 <h2>Your Score</h2>

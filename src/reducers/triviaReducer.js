@@ -1,14 +1,14 @@
 import { GET_TRIVIA_START, GET_TRIVIA_SUCCESS, GET_TRIVIA_FAIL } from '../actions/'
-import jsQuizData from '../jsQuizQuestions'
+import { NEXT_QUESTION } from '../actions/nxtCSQuestion'
+
 
 const initialState = {
-    jsTriviaData: jsQuizData,
     csTriviaData: [],
     error: "",
     isFetching: false,
 }
 
-function triviaReducer(state = initialState, action) {
+export const triviaReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_TRIVIA_START:
             return { ...state, isFetching: true }
@@ -16,6 +16,8 @@ function triviaReducer(state = initialState, action) {
             return { ...state, isFetching: false, csTriviaData: action.payload }
         case GET_TRIVIA_FAIL:
             return { ...state, isFetching: false, error: action.payload }
+        case NEXT_QUESTION:
+            return { ...state.csTriviaData.shift()}
         default:
             return state
     }
@@ -23,14 +25,7 @@ function triviaReducer(state = initialState, action) {
 
 export default triviaReducer
 
-// const initialState = {example: ‘’, isExample: true, errors: ‘’}
-// function exampleReducer(state = exampleState, action){
-// switch(action.type){
-// case EXAMPLE_START :
-// return {...state, isExample: false}
 
-// default: return state
-// } }
 
 
 
