@@ -8,7 +8,7 @@ body {
 body {
   height: 100vh;
   width: 100vw;
-  background-color: white;
+  background-color: rgb(48,52,63);
   align-content: center;
 }
 
@@ -21,23 +21,224 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas: 
-  "navbar jsquiz jsquiz"
-  "navbar jsquiz jsquiz"
-  "navbar jsquiz jsquiz";
+  "navbar quiz quiz"
+  "navbar quiz quiz"
+  "navbar quiz quiz"
+  "navbar quiz quiz";
 }
 
 .navbar {
   grid-area: navbar;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(27,32,33);
   border: solid whitesmoke 3px;
-  border-radius: 15px;
   color: whitesmoke;
+  padding-top: 0px;
 }
 
 .navbar, ul {
   list-style: none;
 }
 
+Link {
+  color: rgb(245, 245, 245);
+}
+
+.menu-header {
+  background-color: rgb(48,52,63);
+  text-align: right;
+  margin-top: 0px;
+  align-self: stretch;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-around;
+  text-align: right;
+}
+
+.menu-items {
+  padding: 15px;
+  color: rgb(236, 230, 230);
+}
+
+.home-page {
+  padding-left: 15px;
+  width: 100%;
+  color: #f3eded;
+  
+}
+
+.hp-header {
+  color: rgb(100, 24, 172);
+}
+
+.cstrivia {
+  padding-left: 10px;
+  grid-area: quiz;
+  background-color: rgb(27,32,33);
+  color: rgb(100, 24, 172);
+  text-align: center;
+}
+
+.cs-question {
+  color: whitesmoke;
+}
+
 .jsquiz {
   padding-left: 10px;
-  grid-area: jsquiz;
+  grid-area: quiz;
+  background-color: rgb(27,32,33);
+  color: rgb(137, 2, 62);
+  text-align: center;
+}
+
+.hquiz {
+  padding-left: 10px;
+  grid-area: quiz;
+  background-color: rgb(27,32,33);
+  color: rgb(28, 140, 155);
+  text-align: center;
+}
+
+.question-block {
+  width: 75%;
+  margin: auto;
+  color: whitesmoke
+}
+
+.jsanswer-btns {
+  width: 50%;
+  height: 30vh;
+  background-color: rgb(137, 2, 62);
+  border-style: solid;
+  border-width: 3px;
+  border-color: whitesmoke;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hanswer-btns {
+  width: 50%;
+  height: 30vh;
+  background-color: rgb(28, 140, 155);
+  border-style: solid;
+  border-width: 3px;
+  border-color: whitesmoke;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.csanswer-btns {
+  width: 50%;
+  height: 30vh;
+  background-color: rgb(100, 24, 172);
+  border-style: solid;
+  border-width: 3px;
+  border-color: whitesmoke;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.jsbuttons {
+  outline: none;
+  margin: auto;
+  padding: 50%;
+  border-style: solid;
+  border-color: white;
+  border-radius: .25em;
+  background: inherit;
+  cursor: pointer;
+  padding: .4em .8em;
+  text-rendering: optimizeLegibility;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: bold;
+  color: white;
+  -webkit-transform: translateY(-.2em);
+  -moz-transform: translateY(-.2em);
+  transform: translateY(-.2em)
+}
+
+.hbuttons {
+  outline: none;
+  margin: auto;
+  padding: 50%;
+  border-style: solid;
+  border-color: white;
+  border-radius: .25em;
+  background: inherit;
+  cursor: pointer;
+  padding: .4em .8em;
+  text-rendering: optimizeLegibility;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: bold;
+  color: white;
+  -webkit-transform: translateY(-.2em);
+  -moz-transform: translateY(-.2em);
+  transform: translateY(-.2em)
+}
+
+.jsbuttons:hover,
+.jsbuttons.hover{
+  background:rgb(48,52,63);
+}
+
+.hbuttons:hover,
+.hbuttons.hover {
+  background:rgb(48,52,63);
+}
+
+.cs-btn {
+  outline: none;
+  margin: auto;
+  padding: 50%;
+  border-style: solid;
+  border-color: white;
+  border-radius: .25em;
+  background: inherit;
+  cursor: pointer;
+  padding: .4em .8em;
+  text-rendering: optimizeLegibility;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: bold;
+  color: white;
+  -webkit-transform: translateY(-.2em);
+  -moz-transform: translateY(-.2em);
+  transform: translateY(-.2em)
+}
+
+.cs-btn:hover,
+.cs-btn.hover {
+  background:rgb(48,52,63);
+}
+
+.score {
+  text-align: center; 
+}
+
+.total-score {
+  font-size:larger;
+}
+
+.actual-score {
+  font-size: x-large;
+  font-weight: bolder;
+  color: whitesmoke;
+}
+
+.resources-pg {
+  padding-left: 15px;
+  grid-area: quiz;
+  background-color: rgb(27,32,33);
+  width: 100%;
+  color: #f3eded;
 }

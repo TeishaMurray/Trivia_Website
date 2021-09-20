@@ -1,6 +1,6 @@
 const htmlQuizData = [
     {
-        question: "HTML stand for 'Hyper Text Markup Language.",
+        question: "HTML stand for 'Hyper Text Markup Language'.",
         answers: [
             { answr: "true", isCorrect: true },
             { answr: "false", isCorrect: false },

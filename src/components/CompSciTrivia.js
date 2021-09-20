@@ -29,16 +29,21 @@ const CompSciTrivia = (props) => {
     return (
         <div className="cstrivia">
             <h2 className="quiztitle">Computer Science Trivia</h2>
-            <div>
+            <div className="question-block">
                 {props.csTriviaData.length > 0 ?
-                    <div>
-                        <h3>{props.csTriviaData[0].question}</h3>
-                        <button onClick={fetchTrivia()}>{props.csTriviaData[0].correct_answer}</button>
-                        <button onClick={fetchTrivia()}>{props.csTriviaData[0].incorrect_answers}</button>
+                    <div className="cstrivia">
+                        <h3 className="cs-question">{props.csTriviaData[0].question}</h3>
+                        <div className="csanswer-btns">
+                        <button className="cs-btn" onClick={fetchTrivia()}>{props.csTriviaData[0].correct_answer}</button>
+                        <button className="cs-btn" onClick={fetchTrivia()}>{props.csTriviaData[0].incorrect_answers}</button>
+                        </div>
                     </div>
                     : "Loading"}
             </div>
-            Hello we're inside compSciQuiz
+            <div className="score">
+                <h2>Your Score</h2>
+                <div><span className="actual-score"></span><span className="total-score">/10</span></div>
+            </div>
         </div>
     )
 }

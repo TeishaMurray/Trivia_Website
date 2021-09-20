@@ -8,10 +8,10 @@ const JSArrayQuiz = (props) => {
             <div className="question-block">
                 <h3>{props.quiz.question}</h3>
             </div>
-            <div className="answer-btns">
-                {props.quiz.answers.map((answerOptions) => <button className="btns" onClick={() => props.nextJSQuestion(answerOptions.isCorrect)}>{answerOptions.answr}</button>)}
+            <div className="jsanswer-btns">
+                {props.quiz.answers.map((answerOptions) => <button className="jsbuttons" onClick={() => props.nextJSQuestion(answerOptions.isCorrect)}>{answerOptions.answr}</button>)}
             </div>
-            <div className="jsarrayscore">
+            <div className="score">
                 <h2>Your Score</h2>
                 <div><span className="actual-score">{props.jsScoreDisplay}</span><span className="total-score">/10</span></div>
             </div>
