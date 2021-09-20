@@ -13,7 +13,7 @@ const resources = () => {
             </ul>
             <p>*This website is an extension of another design. Although I did use the above article for guidance, I decided to stretch my skills a bit by taking it a step further and passing the quiz data as props.</p>
             <p>You can see the original version and more details at:</p>
-            <a href="https://github.com/TeishaMurray/React_Quiz.git">Murray's React Quiz</a>
+            <a href="https://quiz-js-arraymethods.herokuapp.com/">Murray's React Quiz</a>
         </div>
     )
 }
