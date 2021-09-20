@@ -1,12 +1,12 @@
-// export const NEXT_QUESTION = "NEXT_QUESTION"
+export const NEXT_QUESTION = "NEXT_QUESTION"
 
-// const nxtTriviaQuestion = () => {
-//     return (tryingDispatch) => {
-//         tryingDispatch({ 
-//             type: NEXT_QUESTION, 
-//             // payload: res.data.results
-//         })
-//     }
-// }
+const nxtTriviaQuestion = () => {
+    return (tryingDispatch) => {
+        tryingDispatch({ 
+            type: NEXT_QUESTION, 
+            // payload: res.data.results
+        })
+    }
+}
 
-// export default nxtTriviaQuestion
+export default nxtTriviaQuestion

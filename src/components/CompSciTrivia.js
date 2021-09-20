@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import fetchTrivia from '../actions/index'
-import tryingDispatch from '../actions/nxtCSQuestion'
+import nxtTriviaQuestion from '../actions/nxtCSQuestion'
 
 
 const mapStateToProps = (state) => {
@@ -34,8 +34,8 @@ const CompSciTrivia = (props) => {
                     <div className="cstrivia">
                         <h3 className="cs-question">{props.csTriviaData[0].question}</h3>
                         <div className="csanswer-btns">
-                        <button className="cs-btn" onClick={tryingDispatch()}>{props.csTriviaData[0].correct_answer}</button>
-                        <button className="cs-btn" onClick={tryingDispatch()}>{props.csTriviaData[0].incorrect_answers}</button>
+                        <button className="cs-btn" onClick={nxtTriviaQuestion()}>{props.csTriviaData[0].correct_answer}</button>
+                        <button className="cs-btn" onClick={nxtTriviaQuestion()}>{props.csTriviaData[0].incorrect_answers}</button>
                         </div>
                     </div>
                     : "Loading"}
