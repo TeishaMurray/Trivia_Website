@@ -1,13 +1,13 @@
 const htmlQuizData = [
     {
-        question: "HTML stand for 'Hyper Text Markup Language'.",
+        question: "HTML stands for 'Hyper Text Markup Language'.",
         answers: [
             { answr: "true", isCorrect: true },
             { answr: "false", isCorrect: false },
         ]
     },
     {
-        question: "The HTML element is defined by a start tag, some concent, and an endtag.",
+        question: "The HTML element is defined by a start tag, some content, and an end tag.",
         answers: [
             { answr: "true", isCorrect: true },
             { answr: "false", isCorrect: false },
