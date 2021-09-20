@@ -1,16 +1,18 @@
 import axios from 'axios'
+import { useDispatch } from 'react-redux'
 
 export const GET_TRIVIA_START = "GET_TRIVIA_START"
 export const GET_TRIVIA_SUCCESS = "GET_TRIVIA_SUCCESS"
 export const GET_TRIVIA_FAIL = "GET_TRIVIA_FAIL"
 export const NEXT_QUESTION = "NEXT_QUESTION"
 
+export const dispatch = useDispatch
 
-// export const nxtTriviaQuestion = () => () => {
-//     return (dispatch) => {
-//         dispatch({ type: NEXT_QUESTION })
-//     }   
-// }
+export const nxtTriviaQuestion = () => {
+    return (dispatch) => {
+        dispatch({ type: NEXT_QUESTION })
+    }   
+}
 
 const fetchTrivia = () => dispatch => {
     // return (dispatch) => {
