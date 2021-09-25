@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 
 import { connect } from 'react-redux'
 import fetchTrivia from '../actions/index'
-// import { nxtTriviaQuestion } from '../actions/nxtCSQuestion'
 
 
 const mapStateToProps = (state) => {
@@ -12,22 +11,43 @@ const mapStateToProps = (state) => {
 }
 
 const CompSciTrivia = (props) => {
-    const [index, setIndex] = useState(0)
-    // const [csScore, setCSScore] = useState(0)
-    const handleClick = () => {
-        if(props.csTriviaData.length >= 2) {
+    console.log(props)
+    let [index, setIndex] = useState(0)
+    let [csScore, setCSScore] = useState(0)
+    
+    const handleCorrect = () => {
+        if(index <= 8) {
+            setIndex(index + 1)
+            setCSScore(csScore + 1)
+        }
+        else if(index = 9){
+            setCSScore(csScore + 1)
+            alert("Quiz Complete. Click 'Refresh' to try again.")
+        }
+        else{
+            alert("Quiz Complete. Click 'Refresh' to try again.")
+        }            
+    }
+
+    const handleIncorrect = () => {
+        if(index <= 8){
             setIndex(index + 1)
         }
-                     
+        else{
+            alert("Quiz Complete. Click 'Refresh' to try again.")
+        }
     }
+    //scorekeeping is working
+    //make sure when they click on either button the entire array gets printed first
 
     useEffect(() => {
         props.fetchTrivia()
     }, [])
-    // console.log(index)
-    // console.log("comp sci trivia mounted", props)
-    // console.log("just props", props)
+    console.log(index)
+    console.log("comp sci trivia mounted", props)
+    console.log("just props", props)
     console.log("props.csTriviaData", props.csTriviaData)
+    // console.log("answers", props.csTriviaData[0].correct_answer, props.csTriviaData[0].incorrect_answers)
 
     return (
         <div className="cstrivia">
@@ -37,15 +57,15 @@ const CompSciTrivia = (props) => {
                     <div className="cstrivia">
                         <h3 className="cs-question">{props.csTriviaData[index].question.replace("&quot;", "'")}</h3>
                         <div className="csanswer-btns">
-                        <button className="cs-btn" onClick={handleClick}>{props.csTriviaData[index].correct_answer}</button>
-                        <button className="cs-btn" onClick={handleClick}>{props.csTriviaData[index].incorrect_answers}</button>
+                        <button className="cs-btn" onClick={handleCorrect}>{props.csTriviaData[index].correct_answer}</button>
+                        <button className="cs-btn" onClick={handleIncorrect}>{props.csTriviaData[index].incorrect_answers}</button>
                         </div>
                     </div>
                     : "Loading"}
             </div>
             <div className="score">
                 <h2>Your Score</h2>
-                <div><span className="actual-score"></span><span className="total-score">/10</span></div>
+                <div><span className="actual-score">{csScore}</span><span className="total-score">/10</span></div>
             </div>
         </div>
     )
