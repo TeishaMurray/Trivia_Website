@@ -23,12 +23,11 @@ body {
   grid-template-areas: 
   "navbar quiz quiz"
   "navbar quiz quiz"
-  "navbar quiz quiz"
   "navbar quiz quiz";
 }
 
 .navbar {
-  grid-area: navbar;
+  /* grid-area: navbar; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -68,11 +67,11 @@ Link {
   padding-left: 15px;
   width: 100%;
   color: #f3eded;
-  
+  grid-area: quiz;
 }
 
 .hp-header {
-  color: rgb(100, 24, 172);
+  color: rgb(54, 11, 94);
 }
 
 .cstrivia {

@@ -7,6 +7,7 @@ import HTMLQuiz from './components/HTMLQuiz'
 import htmlQuizData from './htmlQuizQuestions'
 import Home from './components/Home'
 import CompSciTrivia from './components/CompSciTrivia'
+import GlobalScore from './components/GlobalScore'
 import Resources from './components/Resources'
 // import csTriviaData from './reducers/triviaReducer'
 import './App.css';
@@ -82,6 +83,10 @@ const App = () => {
               nextJSQuestion={nextJSQuestion}
               jsScoreDisplay={jsScore}
             />
+          </Route>
+
+          <Route path="/globalscore">
+            <GlobalScore />
           </Route>
 
           <Route path="/resources">

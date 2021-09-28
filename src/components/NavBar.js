@@ -12,6 +12,7 @@ const NavBar = () => {
                     <div className="menu-items"><li><Link to="/compscitrivia">Computer Science Trivia</Link></li></div>
                     <div className="menu-items"><li><Link to="/htmlquiz">HTML Quiz</Link></li></div>
                     <div className="menu-items"><li><Link to="/jsarrayquiz">JavaScript Array Methods Quiz</Link></li></div>
+                    <div className="menu-items"><li><Link to="/globalscore">Scoreboard</Link></li></div>
                     <div className="menu-items"><li><Link to="/resources">Resources</Link></li></div>
                 </ul>
             </div>
